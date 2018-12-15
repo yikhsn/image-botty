@@ -87,7 +87,6 @@ const tweetIt = async() => {
 
       var mediaIdStr = data.media_id_string;
       var params = {
-        status: '#quran',
         media_ids: [mediaIdStr]
       }
 
