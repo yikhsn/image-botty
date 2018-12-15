@@ -1,0 +1,20 @@
+{
+  "name": "mongoose-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "forever": "^0.15.3",
+    "fs": "0.0.1-security",
+    "image-downloader": "^3.4.2",
+    "jimp": "^0.6.0",
+    "twit": "^2.2.11"
+  }
+}
