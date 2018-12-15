@@ -33,7 +33,7 @@ const getAyat = (data) => {
 
 const downloadImage = async() => {
   options = {
-    url: 'https://source.unsplash.com/600x600/?islam,mosque,quran',
+    url: 'https://source.unsplash.com/1200x1200/?islam,mosque,quran',
     dest: 'raw/photo.jpg' 
   };
 
@@ -48,7 +48,7 @@ const downloadImage = async() => {
 
 const editImage = async (text) => {
   try {
-    const font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+    const font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
     console.log(`Font loaded`);
 
     const image = await Jimp.read('raw/photo.jpg');
@@ -57,15 +57,15 @@ const editImage = async (text) => {
     image.brightness( -0.6 )
     .print(
       font,
-      100,
-      100,
+      200,
+      200,
       {
         text: text,
         alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
         alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE
       },
-      400,
-      400
+      800,
+      800
     )
     .write('export/photo.jpg');
     console.log(`image printed`);
@@ -121,7 +121,7 @@ const controlTweetImage = async () => {
   
     editImage(ayat);
 
-    tweetIt();
+    // tweetIt();
   }
 
   else console.log(`text lebih dari 240 karakter`);
