@@ -126,4 +126,4 @@ const controlTweetImage = async () => {
   else console.log(`text lebih dari 240 karakter`);
 };
 
-setInterval(controlTweetImage, 3600);
+setInterval(controlTweetImage, 3600000);
